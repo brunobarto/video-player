@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> Future Video Player</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="tron-bg"></div>
+
+<div class="tron-window resizable" id="tronWindow">
+  <div class="resize-handle resize-br"></div>
+  <div class="resize-handle resize-bl"></div>
+  <div class="resize-handle resize-tr"></div>
+  <div class="resize-handle resize-tl"></div>
+
+  <div class="tron-titlebar" id="tronTitlebar">
+    <div class="tron-title"> Aiden Video Player</div>
+    <div class="tron-buttons">
+      <span class="tron-btn tron-min"></span>
+      <span class="tron-btn tron-max"></span>
+      <span class="tron-btn tron-close"></span>
+    </div>
+  </div>
+
+  <div class="tron-content">
+    <div class="video-wrapper" id="videoWrapper">
+      <video id="videoPlayer"></video>
+
+      <div class="fs-controls" id="fsControls">
+        <button class="fs-btn" id="fsPlayPause">⏯</button>
+        <button class="fs-btn" id="fsExit">⛶</button>
+      </div>
+    </div>
+
+    <div class="tron-timeline">
+      <input id="progressSlider" type="range" min="0" max="100" value="0" class="tron-slider tron-slider-wide">
+      <span id="timeDisplay" class="tron-time">00:00 / 00:00</span>
+    </div>
+
+    <div class="tron-controls">
+
+      <button class="tron-btn-ui" id="btnBack10">⟲ 10s</button>
+      <button class="tron-btn-ui" id="btnForward10">10s ⟳</button>
+
+      <button class="tron-btn-ui" id="btnSpeedDown">⏪</button>
+      <button class="tron-btn-ui" id="playPauseBtn">Play</button>
+      <button class="tron-btn-ui" id="btnSpeedUp">⏩</button>
+
+      <button class="tron-btn-ui" id="btnStop">■</button>
+
+      <input id="volumeSlider" type="range" min="0" max="1" step="0.05" value="1" class="tron-slider">
+
+      <button class="tron-btn-ui" id="fullscreenBtn">Fullscreen</button>
+
+      <label class="tron-file">
+        Load File
+        <input id="fileInput" type="file" accept="video/*">
+      </label>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
